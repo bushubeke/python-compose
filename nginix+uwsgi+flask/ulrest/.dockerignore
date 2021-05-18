@@ -1,0 +1,16 @@
+__pycache__/
+backup/
+.pytest_cache/
+texting/__pycache__/
+texting/.pytest_cache/
+app/__pycache__/
+app/config.py
+include/
+lib/
+lib64/
+share/
+passhas.py
+pvenv.cfg
+README.md
+LCIENSE
+

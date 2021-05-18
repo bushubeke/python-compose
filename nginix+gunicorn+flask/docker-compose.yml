@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+    gunirest:
+        build: ./gunirest
+        hostname: gunirest
+        container_name: gunirest
+        restart: always
+        environment: 
+           - APPNAME=First
+        expose: 
+           - "4000"
+        networks:
+           - backbone
+        
+    gunix:
+        build: ./nginx
+        hostname: guinx
+        container_name: guninx
+        restart: always
+        ports: 
+           - "80:80"
+        networks:
+            - backbone
+        links:
+            - gunirest:gunirest
+networks:
+    backbone:
+        driver: bridge        
+
+# services:
+#     gplusrest:
+#         build: .services/gplusrest
+#         container_name: gplusrest
+#         restart: always
+#         environment: 
+#             - APPNAME=First
+#         command: gunicorn --worker-class eventlet -w 1 --bind 0.0.0.0:5000 production:pro
+#         ports:
+#             - 5000:5000
+#     gnginx:
+#         build: ./gnginx
+#         container_name: gnginx
+#         restart: always
+#         ports: 
+#            - "5000:80"
+#         external_links: 
+#             - gplusrest
+#         depends_on: 
+#             - gplusrest

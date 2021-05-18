@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+    fastrest:
+        build: ./fastrest
+        hostname: fastrest
+        container_name: fastrest
+        restart: always
+        environment: 
+           - APPNAME=First
+        expose: 
+           - "5000"
+        networks:
+           - backbone
+        
+    fginx:
+        build: ./nginx
+        hostname: fginx
+        container_name: fginx
+        restart: always
+        ports: 
+           - "80:80"
+        networks:
+            - backbone
+        links:
+            -fastrest:fastrest
+networks:
+    backbone:
+        driver: bridge        
+
+# services:
+#     gplusrest:
+#         build: .services/gplusrest
+#         container_name: gplusrest
+#         restart: always
+#         environment: 
+#             - APPNAME=First
+#         command: gunicorn --worker-class eventlet -w 1 --bind 0.0.0.0:5000 production:pro
+#         ports:
+#             - 5000:5000
+#     gnginx:
+#         build: ./gnginx
+#         container_name: gnginx
+#         restart: always
+#         ports: 
+#            - "5000:80"
+#         external_links: 
+#             - gplusrest
+#         depends_on: 
+#             - gplusrest

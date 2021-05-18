@@ -1,0 +1,15 @@
+# created by virtualenv automatically
+__pycache__/
+backup/
+.pytest_cache/
+project/__pycache__/
+project/.pytest_cache/
+app/__pycache__/
+include/
+lib/
+lib64/
+share/
+passhas.py
+pvenv.cfg
+README.md
+LCIENSE
