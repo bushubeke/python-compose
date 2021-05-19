@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> This is a test html whatever now</h1>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function(){
+  // Handler when the DOM is fully loaded
+  
+
+        //####        
+        var player = document.querySelector('#player');
+        console.log(player)
+        var handleSuccess = function(stream) {
+          player.srcObject = stream;
+        };
+      
+        navigator.mediaDevices.getUserMedia({ audio: true,  video: { width: 450, height: 250 }})
+            .then(handleSuccess)
+
+        //##
+    });
+      </script>
+
+<video id="player" height='300px' width='500px' controls></video>
+</body>
+</html>

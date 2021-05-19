@@ -1,17 +1,14 @@
-# created by virtualenv automatically
 __pycache__/
 backup/
 .pytest_cache/
 project/__pycache__/
 project/.pytest_cache/
-app/__pycache__/
 include/
 lib/
-bin/
 lib64/
 share/
 passhas.py
-pyvenv.cfg
+pvenv.cfg
 README.md
 LCIENSE
-project/app/config.py
+

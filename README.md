@@ -1,10 +1,11 @@
-# this are python webframework config sample without https 
+# This are python webframework config sample without https 
  * python packages used are 
     * flask-restx
     * flask-sqlalchemy
     * pytest
     * flask-socketio
     * flask-marshmallow
+    * flask-migrate
     * gunicorn with eventlet
     * uwsgi with gevent (dependss on the compose file)
     * fast api ( with uvicorn is not updated yet)
@@ -20,4 +21,6 @@ here are the pages you can test
   * localhost/admin- flask admin home
   * localhost/pages/docktest - freecodecamp frontend certification apps(not optimized for mobile users)
   * localhost/pages/sockettest - flasksocket.io functionality page( it shuoud add one when clicked)
+
+
 
