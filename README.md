@@ -9,6 +9,7 @@
     * gunicorn with eventlet
     * uwsgi with gevent (dependss on the compose file)
     * fast api ( with uvicorn is not updated yet)
+    * flask-mail is used( which is not filled out on sampleconfig.py)
 
  * nginx as a reverse proxy server(and no https configuration added)
  * it uses sqlite for all but ( psql containter config provided by fastapi creater Sebastián Ramírez for psql can be used) \
@@ -22,5 +23,6 @@ here are the pages you can test
   * localhost/pages/docktest - freecodecamp frontend certification apps(not optimized for mobile users)
   * localhost/pages/sockettest - flasksocket.io functionality page( it shuoud add one when clicked)
 
-
+## to test it locally please change the name of "sampleconfig.py" file to "config.py" file
+## also the mail configuration values are not filled in the the sample config file for flask apps
 
