@@ -15,8 +15,8 @@
  * it uses sqlite for all but ( psql containter config provided by fastapi creater Sebastián Ramírez for psql can be used) \
  with slight modification
 the front end fcc is made by react and has not been made for mobile phones
-the react codes can be found in here 
- * https://github.com/bushubeke/fcc
+the react codes can be found in here https://github.com/bushubeke/fcc
+ 
 here are the pages you can test
   * localhost - open api documentaiton 
   * localhost/admin- flask admin home
